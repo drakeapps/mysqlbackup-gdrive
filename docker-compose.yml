@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  backup:
+    image: ghcr.io/drakeapps/mysqlbackup-gdrive
+    build: .
+    restart: unless-stopped
+    environment:
+      - MYSQL_USER=root
+      - MYSQL_PASS=x
+      - MYSQL_HOST=mysql
+      - MYSQL_DB=cool_data
+      - RCLONE_TOKEN={}
+      - DEST_DIR=/backups/db-backups/mysql
