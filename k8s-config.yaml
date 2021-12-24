@@ -32,7 +32,5 @@ spec:
               - name: DEST_DIR
                 value: /backups/k8s/db-backups/webapp/
           restartPolicy: OnFailure
-          imagePullSecrets:
-            - name: mysecretname
 
 
